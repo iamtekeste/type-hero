@@ -5,7 +5,7 @@
 .canvas {
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
@@ -14,9 +14,39 @@
   border: none;
   padding: 20px 20px;
   transition: background .3s ease-in;
+  text-align: center;
   width: 90%;
 }
 .text-editor:focus,
 .text-editor:hover {
     background: #fff;
+}
+
+
+.sidebar {
+  background: #333333;
+  width: 25%;
+}
+.header {
+  color: #FFF;
+  font-family: Montserrat;
+  text-align: center;
+}
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.header span {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;  
+}
+.header hr {
+  border-color: #777272;
+  border-width: 1px;
+  width: 40%;
+  margin: 0 auto;
 }

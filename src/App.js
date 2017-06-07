@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Canvas from './components/Canvas';
+import SideBar from './components/SideBar';
 import './App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Canvas {...this.state} />
+        <SideBar {...this.state} />
       </div>
     );
   }
