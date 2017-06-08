@@ -10,17 +10,25 @@ class App extends Component {
     this.state = {
       fontFamily: 'Montserrat',
       fontSize: '34px',
-      fontWeight: 'SemiBold',
+      fontWeight: 700,
       textColor: '#9B51E0',
       backgroundColor: '#F8F3F3',
     };
+    this.updateFontFamily = this.updateFontFamily.bind(this);
+  }
+
+  updateFontFamily(fontFamily) {
+    this.setState({ fontFamily });
   }
 
   render() {
+    const handlers = {
+      updateFontFamily: this.updateFontFamily,
+    };
     return (
       <div className="App">
         <Canvas {...this.state} />
-        <SideBar {...this.state} />
+        <SideBar handlers={handlers} />
       </div>
     );
   }

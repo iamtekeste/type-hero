@@ -30,6 +30,7 @@
 .header {
   color: #FFF;
   font-family: Montserrat;
+  margin-bottom: 50px;
   text-align: center;
 }
 .header h1 {
@@ -49,4 +50,15 @@
   border-width: 1px;
   width: 40%;
   margin: 0 auto;
+}
+
+.tools {
+  color: #FFF;
+  padding-left: 15px;
+}
+.section-title {
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-transform: uppercase;
 }

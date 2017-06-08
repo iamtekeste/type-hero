@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
+import TextStyler from './TextStyler';
 
-export default class SideBar extends Component {
-  constructor(props) {
-    super(props);
+const SideBar = (props) => {
+  const handlers = props.handlers;
 
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="sidebar">
-        <Header />
+  return (
+    <div className="sidebar">
+      <Header />
+      <div className="tools">
+        <TextStyler handlers={handlers} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+SideBar.propTypes = {
+  handlers: PropTypes.shape({
+    updateFontFamily: PropTypes.func,
+  }).isRequired,
+};
+
+export default SideBar;
+
