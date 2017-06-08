@@ -1,10 +1,10 @@
 import React from 'react';
-import TextEditor from './TextEditor';
 import PropTypes from 'prop-types';
+import TextEditor from './TextEditor';
 
 const Canvas = ({ fontFamily, fontSize, fontWeight, textColor, backgroundColor }) => {
   const textStyle = {
-    fontFamily: `${fontFamily} ${fontWeight}`,
+    fontFamily: `${fontFamily}`,
     fontSize,
     fontWeight,
     color: textColor,
