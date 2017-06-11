@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "algoliasearch": "^3.23.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
+    "react-autosuggest": "^9.0.1",
     "react-dom": "^15.5.4",
-    "slate": "^0.20.2"
+    "slate": "^0.20.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
