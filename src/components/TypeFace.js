@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
+import WebFont from 'webfontloader';
 import PropTypes from 'prop-types';
+import AutoSuggest from './AutoSuggest';
 
-export default class GoogleFont extends Component {
+const fontFamilies = new Set();
+
+export default class TypeFace extends Component {
+  static fetchFont(newVal) {
+    fontFamilies.add(newVal);
+    WebFont.load({
+      google: {
+        families: Array.from(fontFamilies),
+      },
+    });
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -10,21 +23,21 @@ export default class GoogleFont extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    const newVal = event.target.value;
+  handleChange(newVal) {
     this.setState({ fontFamily: newVal });
     this.props.handleChange(newVal);
+    TypeFace.fetchFont(newVal);
   }
 
   render() {
     return (
       <div>
-        <input type="text" value={this.state.fontFamily} onChange={this.handleChange} />
+        <AutoSuggest handleChange={this.handleChange} />
       </div>
     );
   }
 }
 
-GoogleFont.propTypes = {
+TypeFace.propTypes = {
   handleChange: PropTypes.func.isRequired,
 };
