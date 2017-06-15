@@ -1,0 +1,7 @@
+ ☐ Hook up text input to Google Fonts API & Algolia search
+    ✔ Introduce Google API with just the text input @done (17-06-10 21:24)
+    ✔ Wire in Algolia @done (17-06-10 21:24)
+    ✔ show list of font variants @done (17-06-14 23:29)
+    ☐ Make it download and set the first font maybe pick Roboto
+    ☐ Style font selector
+ ☐ Roncilate font sizes with font family component

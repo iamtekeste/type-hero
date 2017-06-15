@@ -19,6 +19,7 @@ const SideBar = (props) => {
 SideBar.propTypes = {
   handlers: PropTypes.shape({
     updateFontFamily: PropTypes.func,
+    updateFontVariant: PropTypes.func,
   }).isRequired,
 };
 

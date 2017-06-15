@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextEditor from './TextEditor';
 
-const Canvas = ({ fontFamily, fontSize, fontWeight, textColor, backgroundColor }) => {
+const Canvas = ({ fontFamily, fontSize, fontWeight, fontStyle, textColor, backgroundColor }) => {
   const textStyle = {
     fontFamily: `'${fontFamily}'`,
     fontSize,
     fontWeight,
+    fontStyle,
     color: textColor,
   };
   const canvasStyle = {
@@ -24,6 +25,7 @@ Canvas.propTypes = {
   fontFamily: PropTypes.string.isRequired,
   fontWeight: PropTypes.number.isRequired,
   fontSize: PropTypes.string.isRequired,
+  fontStyle: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
 
