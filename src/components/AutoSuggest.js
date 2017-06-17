@@ -39,7 +39,7 @@ export default class Algo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Roboto',
+      value: '',
       suggestions: [{ family: 'Loading' }],
       selectedFontVariants: [],
     };
@@ -73,16 +73,14 @@ export default class Algo extends Component {
   }
   updateSuggestions(searchObject) {
     index.search(searchObject.value, (err, content) => {
-      const firstFontVariants = content.hits[0].variants;
-      const formattedVariants = Algo.formatVariants(firstFontVariants);
       this.setState({
         suggestions: content.hits,
-        selectedFontVariants: formattedVariants,
       });
     });
   }
   updateFontVariant(event) {
-    const variant = JSON.parse(event.target.value);
+    const value = event.target.value;
+    const variant = JSON.parse(value);
     this.props.updateFontVariant(variant);
   }
   render() {
@@ -95,6 +93,24 @@ export default class Algo extends Component {
         {variant.weight} {variant.style}
       </option>
     ));
+
+    // only display the style selector only if they have selected a font
+    let selectVariants = '';
+    if (value) {
+      let defaultValue = {
+        weight: '400',
+        style: 'normal',
+      };
+      defaultValue = JSON.stringify(defaultValue);
+      selectVariants =
+        (
+          <select onChange={this.updateFontVariant}>
+            <option value={defaultValue}>Select Style</option>
+            {variants}
+          </select>
+        );
+    }
+
     return (
       <div>
         <Autosuggest
@@ -117,9 +133,7 @@ export default class Algo extends Component {
           }}
         />
         <div className="variants">
-          <select name="variants" id="variants" onChange={this.updateFontVariant}>
-            {variants}
-          </select>
+          {selectVariants}
         </div>
       </div>
     );
