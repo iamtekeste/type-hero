@@ -108,20 +108,26 @@ export default class Algo extends Component {
 
     // only display the style selector only if they have selected a font
     let selectVariants = '';
-    if (value) {
-      let defaultValue = {
-        weight: '400',
+    let defaultValues = [
+      {
+        weight: 400,
         style: 'normal',
-      };
-      defaultValue = JSON.stringify(defaultValue);
-      selectVariants =
-        (
-          <select onChange={this.updateFontVariant}>
-            <option value={defaultValue}>Select Style</option>
-            {variants}
-          </select>
-        );
-    }
+      },
+      {
+        weight: 700,
+        style: 'normal',
+      },
+    ];
+    defaultValues = defaultValues.map(val => (
+      <option value={JSON.stringify(val)} key={val.weight+val.style}>{val.weight}</option>
+    ));
+    selectVariants =
+      (
+        <select onChange={this.updateFontVariant}>
+          {defaultValues}
+          {variants}
+        </select>
+      );
 
     return (
       <div>

@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       fontFamily: 'Montserrat',
       fontSize: 34,
-      fontWeight: 700,
+      fontWeight: 400,
       fontStyle: 'normal',
       textColor: '#9B51E0',
       backgroundColor: '#F8F3F3',

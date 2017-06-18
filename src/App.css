@@ -1,3 +1,11 @@
+input:focus,
+select:focus {
+  outline-color: #fff;
+  box-radius: 0px;
+}
+select#fontsizes:focus {
+  outline: none;
+}
 input::-webkit-calendar-picker-indicator {
     opacity: 1;
 }
@@ -54,31 +62,85 @@ input::-webkit-calendar-picker-indicator {
   width: 40%;
   margin: 0 auto;
 }
-
+.text-styler {
+    max-width: 200px;
+}
 .tools {
   color: #FFF;
   padding-left: 15px;
 }
 .section-title {
-    font-size: 18px;
-    font-family: Roboto;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 /* Ediable select input */
 .font-size {
     position: relative;
     width: 60px;
+    float: right;
 }
 .font-size select {
     width: 100%;
 }
 .font-size > * {
     box-sizing: border-box;
-    height: 1.5em;
 }
 .font-size input {
     position: absolute;
     width: calc(100% - 20px);
+}
+
+/* Font selector */
+.react-autosuggest__input {
+  background: #000;
+  border: none;
+  color: #fff;
+  height: 30px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  min-width: 191px;
+}
+.react-autosuggest__suggestions-list {
+    margin-top: -14px;
+    list-style: none;
+    background: #000;
+    color: #fff;
+    max-width: 200px;
+    padding-left: 0px;
+}
+.react-autosuggest__suggestion {
+    padding: 8px 0px;
+    padding-left: 8px;
+}
+.react-autosuggest__suggestion--highlighted {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.variants, .font-size {
+    display: inline-block;
+}
+/* Font variant selector */
+.variants {
+  margin-right: 35px;
+}
+.variants select {
+  background: #000;
+  color: #fff;
+  height: 30px;
+  border:  0px;
+}
+
+/* Font size selector */
+.font-size input, select {
+  background: #000;
+  border: none;
+  color: #FFF;
+  height: 30px;
+  padding-left: 10px;
 }
