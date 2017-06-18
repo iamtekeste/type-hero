@@ -20,8 +20,8 @@ SideBar.propTypes = {
   handlers: PropTypes.shape({
     updateFontFamily: PropTypes.func,
     updateFontVariant: PropTypes.func,
+    updateFontSize: PropTypes.func,
   }).isRequired,
 };
 
 export default SideBar;
-

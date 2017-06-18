@@ -1,3 +1,6 @@
+input::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
 .App {
   display: flex;
 }
@@ -43,7 +46,7 @@
 .header span {
   font-size: 14px;
   display: block;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 .header hr {
   border-color: #777272;
@@ -61,4 +64,21 @@
     font-family: Roboto;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/* Ediable select input */
+.font-size {
+    position: relative;
+    width: 60px;
+}
+.font-size select {
+    width: 100%;
+}
+.font-size > * {
+    box-sizing: border-box;
+    height: 1.5em;
+}
+.font-size input {
+    position: absolute;
+    width: calc(100% - 20px);
 }

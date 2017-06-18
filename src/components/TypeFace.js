@@ -7,7 +7,11 @@ export default class TypeFace extends Component {
   render() {
     return (
       <div>
-        <AutoSuggest updateFontFamily={this.props.updateFontFamily} updateFontVariant={this.props.updateFontVariant} />
+        <AutoSuggest
+          updateFontFamily={this.props.updateFontFamily}
+          updateFontVariant={this.props.updateFontVariant}
+          updateFontSize={this.props.updateFontSize}
+        />
       </div>
     );
   }
@@ -16,4 +20,5 @@ export default class TypeFace extends Component {
 TypeFace.propTypes = {
   updateFontFamily: PropTypes.func.isRequired,
   updateFontVariant: PropTypes.func.isRequired,
+  updateFontSize: PropTypes.func.isRequired,
 };

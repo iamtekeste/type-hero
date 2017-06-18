@@ -3,13 +3,14 @@ import Canvas from './components/Canvas';
 import SideBar from './components/SideBar';
 import './App.css';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       fontFamily: 'Montserrat',
-      fontSize: '34px',
+      fontSize: 34,
       fontWeight: 700,
       fontStyle: 'normal',
       textColor: '#9B51E0',
@@ -17,6 +18,7 @@ class App extends Component {
     };
     this.updateFontFamily = this.updateFontFamily.bind(this);
     this.updateFontVariant = this.updateFontVariant.bind(this);
+    this.updateFontSize = this.updateFontSize.bind(this);
   }
 
   updateFontFamily(fontFamily) {
@@ -30,10 +32,17 @@ class App extends Component {
     });
   }
 
+  updateFontSize(fontSize) {
+    this.setState({
+      fontSize,
+    });
+  }
+
   render() {
     const handlers = {
       updateFontFamily: this.updateFontFamily,
       updateFontVariant: this.updateFontVariant,
+      updateFontSize: this.updateFontSize,
     };
     return (
       <div className="App">

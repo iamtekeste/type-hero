@@ -35,7 +35,7 @@ export default class TextEditor extends Component {
     return (
       <Editor
         className="text-editor"
-        placeholder="Give me some text"
+        placeholder="Type something"
         placeholderStyle={{ color: '#aba6b1' }}
         style={this.props.editorStyle}
         state={this.state.state}

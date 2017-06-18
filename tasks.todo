@@ -20,3 +20,6 @@ Perfomance invistagations:
   ☐ check why it is taking sometime to load the font variants
   ☐ use why did you render chrome extension to check for unnecessary renders
   ☐ And test it on slow internent connection
+
+Code Clean up:
+  ☐ see if you extract out font variant from AutoSuggest

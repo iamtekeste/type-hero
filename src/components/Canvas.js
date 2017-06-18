@@ -5,7 +5,7 @@ import TextEditor from './TextEditor';
 const Canvas = ({ fontFamily, fontSize, fontWeight, fontStyle, textColor, backgroundColor }) => {
   const textStyle = {
     fontFamily: `'${fontFamily}'`,
-    fontSize,
+    fontSize: `${fontSize}px`,
     fontWeight,
     fontStyle,
     color: textColor,
@@ -24,7 +24,7 @@ const Canvas = ({ fontFamily, fontSize, fontWeight, fontStyle, textColor, backgr
 Canvas.propTypes = {
   fontFamily: PropTypes.string.isRequired,
   fontWeight: PropTypes.number.isRequired,
-  fontSize: PropTypes.string.isRequired,
+  fontSize: PropTypes.number.isRequired,
   fontStyle: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,

@@ -3,6 +3,7 @@ import Autosuggest from 'react-autosuggest';
 import WebFont from 'webfontloader';
 import algoliasearch from 'algoliasearch';
 import PropTypes from 'prop-types';
+import FontSize from './FontSize';
 
 const appId = 'C1WF35DCV6';
 const apiKey = 'b10e0666dc9b73ce201bf1a3d336055d';
@@ -42,12 +43,14 @@ export default class Algo extends Component {
       value: '',
       suggestions: [{ family: 'Loading' }],
       selectedFontVariants: [],
+      fontSize: '24',
     };
     this.handleChange = this.handleChange.bind(this);
     this.updateSuggestions = this.updateSuggestions.bind(this);
     this.onSuggestionSelected = this.onSuggestionSelected.bind(this);
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
     this.updateFontVariant = this.updateFontVariant.bind(this);
+    this.updateFontSize = this.updateFontSize.bind(this);
   }
   componentDidMount() {
     this.updateSuggestions({ value: '' });
@@ -83,8 +86,17 @@ export default class Algo extends Component {
     const variant = JSON.parse(value);
     this.props.updateFontVariant(variant);
   }
+  updateFontSize(event) {
+    const fontSize = event.target.value;
+    this.setState({
+      fontSize,
+    });
+    let santizedFontSize = parseInt(fontSize, 10);
+    santizedFontSize = santizedFontSize !== santizedFontSize ? 34 : santizedFontSize;
+    this.props.updateFontSize(santizedFontSize);
+  }
   render() {
-    const { value, suggestions, selectedFontVariants } = this.state;
+    const { value, suggestions, selectedFontVariants, fontSize } = this.state;
     const variants = selectedFontVariants.map((variant, vindex) => (
       <option
         value={JSON.stringify(variant)}
@@ -135,6 +147,7 @@ export default class Algo extends Component {
         <div className="variants">
           {selectVariants}
         </div>
+        <FontSize defaultFontSize={fontSize} onChange={this.updateFontSize} />
       </div>
     );
   }
@@ -143,4 +156,5 @@ export default class Algo extends Component {
 Algo.propTypes = {
   updateFontFamily: PropTypes.func.isRequired,
   updateFontVariant: PropTypes.func.isRequired,
+  updateFontSize: PropTypes.func.isRequired,
 };
