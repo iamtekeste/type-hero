@@ -6,7 +6,7 @@ import AutoSuggest from './AutoSuggest';
 export default class TypeFace extends Component {
   render() {
     return (
-      <div>
+      <div className="text-typeface">
         <AutoSuggest
           updateFontFamily={this.props.updateFontFamily}
           updateFontVariant={this.props.updateFontVariant}

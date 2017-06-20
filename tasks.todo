@@ -3,18 +3,21 @@
     ✔ Wire in Algolia @done (17-06-10 21:24)
     ✔ show list of font variants @done (17-06-14 23:29)
     ✔ Make it download and set the first font maybe pick Roboto @done(2017-06-15 22:48) kind off the same thing
-☐ Work on font size
+✔ Work on font size @done(2017-06-18 15:27)
 ☐ Work on color picker
 ☐ Work on backgroundColor
 ☐ Style font selector:
-    ☐ Style the text input
-    ☐ Style the autocomplete
+    ✔ Style the text input @done(2017-06-18 15:27) @project(☐ Style font selector)
+    ✔ Style the autocomplete @done(2017-06-18 15:27) @project(☐ Style font selector)
     ☐ Give credit to Algolia <3
-☐ Style font style
-☐ Style font size
+✔ Style font style @done(2017-06-18 15:27)
+✔ Style font size @done(2017-06-18 15:27)
 ☐ Style color picker
 ☐ Style backgroundColor picker
-☐ Give some love to yourself <3
+☐ Add clear button to font search (x)
+☐ Make look decent on mobile
+☐ Add more colors to github-picker from coolors
+☐ Give some love to yourself <3 i.e made by at the bottom
 
 Perfomance invistagations:
   ☐ check why it is taking sometime to load the font variants

@@ -19,6 +19,7 @@ class App extends Component {
     this.updateFontFamily = this.updateFontFamily.bind(this);
     this.updateFontVariant = this.updateFontVariant.bind(this);
     this.updateFontSize = this.updateFontSize.bind(this);
+    this.updateTextColor = this.updateTextColor.bind(this);
   }
 
   updateFontFamily(fontFamily) {
@@ -37,12 +38,18 @@ class App extends Component {
       fontSize,
     });
   }
+  updateTextColor(textColor) {
+    this.setState({
+      textColor,
+    });
+  }
 
   render() {
     const handlers = {
       updateFontFamily: this.updateFontFamily,
       updateFontVariant: this.updateFontVariant,
       updateFontSize: this.updateFontSize,
+      updateTextColor: this.updateTextColor,
     };
     return (
       <div className="App">
