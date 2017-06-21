@@ -51,12 +51,12 @@ export default class ColorPicker extends Component {
     return (
       <div className="text-color">
         <div
-          className="text-color--preview"
+          className="color--preview"
           style={{ backgroundColor: textColor || defaultColor }}
           onClick={this.toggleGithubPicker}
         />
         <input
-          className="text-color--input"
+          className="color--input"
           type="text"
           value={textColor}
           onChange={this.handleChange}

@@ -22,6 +22,7 @@ SideBar.propTypes = {
     updateFontVariant: PropTypes.func,
     updateFontSize: PropTypes.func,
     updateTextColor: PropTypes.func,
+    updateBackgroundColor: PropTypes.func,
   }).isRequired,
 };
 
