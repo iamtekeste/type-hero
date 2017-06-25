@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { GithubPicker, ChromePicker } from 'react-color';
+import ColorPalettes from '../colors';
 
 export default class ColorPicker extends Component {
   constructor(props) {
@@ -78,6 +79,7 @@ export default class ColorPicker extends Component {
             <div className="github-picker--cover" onClick={this.toggleGithubPicker} />
             <GithubPicker
               color={textColor}
+              colors={ColorPalettes}
               onChangeComplete={this.handleColorPickerChange}
               disableAlpha
             />

@@ -7,24 +7,24 @@
 ✔ Work on color picker @done(2017-06-19 20:55)
 ✔ Work on backgroundColor @done(2017-06-20 21:22)
 ✔ Handle slow or no connection and it SHOULD NOT FAIL / it should say no connection or sth @done(2017-06-24 19:26)
+☐ Make look decent on mobile
+✔ Add more colors to github-picker from coolors @done(2017-06-24 23:45)
 ☐ Style font selector:
     ✔ Style the text input @done(2017-06-18 15:27) @project(☐ Style font selector)
     ✔ Style the autocomplete @done(2017-06-18 15:27) @project(☐ Style font selector)
-    ☐ Make the AutoSuggest scrollable
+    ✔ Make the AutoSuggest scrollable @done(2017-06-24 21:58) @project(☐ Style font selector)
     ☐ Give credit to Algolia <3
 ✔ Style font style @done(2017-06-18 15:27)
 ✔ Style font size @done(2017-06-18 15:27)
 ✔ Style color picker @done(2017-06-21 20:50)
 ✔ Style backgroundColor picker @done(2017-06-21 20:50)
 ☐ Add clear button to font search (x)
-☐ Make look decent on mobile
-☐ Add more colors to github-picker from coolors
 ☐ Give some love to yourself <3 i.e made by at the bottom
 
 Perfomance invistagations:
   ☐ check why it is taking sometime to load the font variants
   ☐ use why did you render chrome extension to check for unnecessary renders
-  ☐ And test it on slow internent connection
+  ✔ And test it on slow internent connection @done(2017-06-24 22:03) @project(Perfomance invistagations)
 
 Code Clean up:
   ☐ see if you extract out font variant from AutoSuggest
