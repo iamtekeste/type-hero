@@ -59,8 +59,8 @@ class App extends Component {
     };
     return (
       <div className="App">
-        <Canvas {...this.state} />
         <SideBar handlers={handlers} />
+        <Canvas {...this.state} />
       </div>
     );
   }
