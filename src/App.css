@@ -4,8 +4,7 @@ input {
 }
 input:focus,
 select:focus {
-  outline-color: #fff;
-  box-radius: 0px;
+  outline: none;
 }
 select#fontsizes:focus {
   outline: none;
@@ -19,13 +18,13 @@ input::-webkit-calendar-picker-indicator {
 
 .canvas {
   display: flex;
+  flex: 1;
   height: 100%;
   width: 75%;
   align-items: center;
   justify-content: center;
   transition: background .3s ease-in-out;
 }
-
 .text-editor {
   border: none;
   padding: 20px 20px;
@@ -37,11 +36,9 @@ input::-webkit-calendar-picker-indicator {
 .text-editor:hover {
     border: 1px dashed;
 }
-
-
 .sidebar {
   background: #333333;
-  width: 25%;
+  width: 230px;
 }
 .header {
   color: #FFF;
@@ -96,28 +93,17 @@ input::-webkit-calendar-picker-indicator {
   min-width: 191px;
 }
 .react-autosuggest__suggestions-list {
-    margin-top: -14px;
-    list-style: none;
-    background: #000;
-    color: #fff;
-/* Ediable select input */
-.font-size {
-    position: relative;
-    width: 60px;
-    float: right;
-}
-.font-size select {
-    width: 100%;
-}
-.font-size > * {
-    box-sizing: border-box;
-}
-.font-size input {
-    position: absolute;
-    width: calc(100% - 20px);
-}
-    max-width: 200px;
-    padding-left: 0px;
+  margin: 0;
+  list-style: none;
+  background: #000;
+  color: #fff;
+  padding-left: 0px;
+  position: absolute;
+  width: 201px;
+  margin-top: -15px;
+  max-height: 203px;
+  overflow-y: scroll;
+  z-index: 2;
 }
 .react-autosuggest__suggestion {
     padding: 8px 0px;
