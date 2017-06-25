@@ -21,6 +21,17 @@ export default class Algo extends Component {
       },
     });
   }
+  static generateVariants(variants) {
+    const fontVariants = variants.map((variant, vindex) => (
+      <option
+        value={JSON.stringify(variant)}
+        key={vindex}
+      >
+        {variant.weight} {variant.style}
+      </option>
+    ));
+    return fontVariants;
+  }
   static formatVariants(variants) {
     const formatted = variants.map((variant) => {
       const fontInfo = {};
@@ -40,6 +51,8 @@ export default class Algo extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
+      errorHappend: false,
       value: '',
       suggestions: [{ family: 'Loading' }],
       selectedFontVariants: [],
@@ -76,7 +89,15 @@ export default class Algo extends Component {
   }
   updateSuggestions(searchObject) {
     index.search(searchObject.value, (err, content) => {
+      if (err) {
+        this.setState({
+          errorHappend: true,
+          isLoading: false,
+        });
+        return;
+      }
       this.setState({
+        isLoading: false,
         suggestions: content.hits,
       });
     });
@@ -96,15 +117,8 @@ export default class Algo extends Component {
     this.props.updateFontSize(santizedFontSize);
   }
   render() {
-    const { value, suggestions, selectedFontVariants, fontSize } = this.state;
-    const variants = selectedFontVariants.map((variant, vindex) => (
-      <option
-        value={JSON.stringify(variant)}
-        key={vindex}
-      >
-        {variant.weight} {variant.style}
-      </option>
-    ));
+    const { isLoading, errorHappend, value, suggestions, selectedFontVariants, fontSize } = this.state;
+    const variants = Algo.generateVariants(selectedFontVariants);
 
     // only display the style selector only if they have selected a font
     let selectVariants = '';
@@ -119,7 +133,7 @@ export default class Algo extends Component {
       },
     ];
     defaultValues = defaultValues.map(val => (
-      <option value={JSON.stringify(val)} key={val.weight+val.style}>{val.weight}</option>
+      <option value={JSON.stringify(val)} key={val.weight + val.style}>{val.weight}</option>
     ));
     selectVariants =
       (
@@ -131,25 +145,31 @@ export default class Algo extends Component {
 
     return (
       <div>
-        <Autosuggest
-          suggestions={suggestions}
-          onSuggestionsFetchRequested={this.updateSuggestions}
-          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-          onSuggestionSelected={this.onSuggestionSelected}
-          getSuggestionValue={typeface => typeface.family}
-          shouldRenderSuggestions={() => true}
-          highlightFirstSuggestion
-          renderSuggestion={typeface => (
-            <div>
-              <div>{typeface.family}</div>
-            </div>
-          )}
-          inputProps={{
-            placeholder: 'Search Google fonts',
-            value,
-            onChange: this.handleChange,
-          }}
-        />
+        { errorHappend ? <div className="error">Refresh the page.</div> : <div className="no-error">
+          {
+            isLoading ? <p>Loading Fonts...</p> :
+            <Autosuggest
+              suggestions={suggestions}
+              onSuggestionsFetchRequested={this.updateSuggestions}
+              onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+              onSuggestionSelected={this.onSuggestionSelected}
+              getSuggestionValue={typeface => typeface.family}
+              shouldRenderSuggestions={() => true}
+              highlightFirstSuggestion
+              renderSuggestion={typeface => (
+                <div>
+                  <div>{typeface.family}</div>
+                </div>
+              )}
+              inputProps={{
+                placeholder: 'Search Google fonts',
+                value,
+                onChange: this.handleChange,
+              }}
+            />
+          }
+        </div>
+         }
         <div className="variants">
           {selectVariants}
         </div>
