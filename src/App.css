@@ -19,7 +19,6 @@ input::-webkit-calendar-picker-indicator {
 .canvas {
   display: flex;
   flex: 1;
-  height: 100%;
   width: 75%;
   align-items: center;
   justify-content: center;

@@ -1,4 +1,4 @@
- ☐ Hook up text input to Google Fonts API & Algolia search
+✔ Hook up text input to Google Fonts API & Algolia search @done(2017-06-26 19:13)
     ✔ Introduce Google API with just the text input @done (17-06-10 21:24)
     ✔ Wire in Algolia @done (17-06-10 21:24)
     ✔ show list of font variants @done (17-06-14 23:29)
