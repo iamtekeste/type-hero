@@ -204,8 +204,11 @@ input::-webkit-calendar-picker-indicator {
   margin-bottom: 5px;
 }
 a {
-    color: #23abfb;
+    color: #FFF;
     font-weight: bold;
+}
+.twitter-share-button {
+  margin-right: 5px;
 }
 /* Mobile Styles */
 @media all and (max-width: 768px) {
