@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Canvas from './components/Canvas';
 import SideBar from './components/SideBar';
 import './App.css';
-
+import Hamburger from './components/Hamburger';
 
 class App extends Component {
   constructor(props) {
@@ -14,13 +14,16 @@ class App extends Component {
       fontWeight: 400,
       fontStyle: 'normal',
       textColor: '#9B51E0',
-      backgroundColor: '#F8F3F3',
+      backgroundColor: '#FDFDFD',
+      sideBarIsOpen: false,
     };
     this.updateFontFamily = this.updateFontFamily.bind(this);
     this.updateFontVariant = this.updateFontVariant.bind(this);
     this.updateFontSize = this.updateFontSize.bind(this);
     this.updateTextColor = this.updateTextColor.bind(this);
     this.updateBackgroundColor = this.updateBackgroundColor.bind(this);
+    this.updateBackgroundColor = this.updateBackgroundColor.bind(this);
+    this.openSidebar = this.openSidebar.bind(this);
   }
 
   updateFontFamily(fontFamily) {
@@ -49,6 +52,11 @@ class App extends Component {
       backgroundColor,
     });
   }
+  openSidebar() {
+    this.setState({
+      sideBarIsOpen: !this.state.sideBarIsOpen,
+    });
+  }
   render() {
     const handlers = {
       updateFontFamily: this.updateFontFamily,
@@ -57,9 +65,11 @@ class App extends Component {
       updateTextColor: this.updateTextColor,
       updateBackgroundColor: this.updateBackgroundColor,
     };
+    const sideBarIsOpen = this.state.sideBarIsOpen;
     return (
       <div className="App">
-        <SideBar handlers={handlers} />
+        <SideBar handlers={handlers} isOpen={sideBarIsOpen} />
+        <Hamburger openSidebar={this.openSidebar} isOpen={sideBarIsOpen} />
         <Canvas {...this.state} />
       </div>
     );

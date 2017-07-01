@@ -1,4 +1,4 @@
- ☐ Hook up text input to Google Fonts API & Algolia search
+✔ Hook up text input to Google Fonts API & Algolia search @done(2017-06-26 19:13)
     ✔ Introduce Google API with just the text input @done (17-06-10 21:24)
     ✔ Wire in Algolia @done (17-06-10 21:24)
     ✔ show list of font variants @done (17-06-14 23:29)
@@ -8,6 +8,7 @@
 ✔ Work on backgroundColor @done(2017-06-20 21:22)
 ✔ Handle slow or no connection and it SHOULD NOT FAIL / it should say no connection or sth @done(2017-06-24 19:26)
 ☐ Make look decent on mobile
+☐ Add Google Analytics
 ✔ Add more colors to github-picker from coolors @done(2017-06-24 23:45)
 ☐ Style font selector:
     ✔ Style the text input @done(2017-06-18 15:27) @project(☐ Style font selector)
