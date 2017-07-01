@@ -5,7 +5,7 @@ export default function Credits() {
     <div className="credits">
       <div className="me">
         <p>
-          Production of @iamtekeste
+          Production of <a href="https://twitter.com/iamtekeste">@iamtekeste</a>
         </p>
         <a className="twitter-follow-button" href="https://twitter.com/iamtekeste" data-show-count="false">Follow @iamtekeste</a>
       </div>
