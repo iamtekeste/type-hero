@@ -192,7 +192,26 @@ input::-webkit-calendar-picker-indicator {
     width: calc(100% - 20px);
 }
 
+/* Footer */
+.credits {
+    color: #fff;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+.me p {
+  font-family: Roboto;
+  margin-bottom: 5px;
+}
+a {
+    color: #23abfb;
+    font-weight: bold;
+}
+/* Mobile Styles */
 @media all and (max-width: 768px) {
+  .header {
+    margin-bottom: 25px;
+  }
   .hint {
     position: absolute;
     top: 100px;

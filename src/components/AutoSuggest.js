@@ -148,25 +148,27 @@ export default class Algo extends Component {
         { errorHappend ? <div className="error">Refresh the page.</div> : <div className="no-error">
           {
             isLoading ? <p>Loading Fonts...</p> :
-            <Autosuggest
-              suggestions={suggestions}
-              onSuggestionsFetchRequested={this.updateSuggestions}
-              onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-              onSuggestionSelected={this.onSuggestionSelected}
-              getSuggestionValue={typeface => typeface.family}
-              shouldRenderSuggestions={() => true}
-              highlightFirstSuggestion
-              renderSuggestion={typeface => (
-                <div>
-                  <div>{typeface.family}</div>
-                </div>
-              )}
-              inputProps={{
-                placeholder: 'Search Google fonts',
-                value,
-                onChange: this.handleChange,
-              }}
-            />
+            <div>
+              <Autosuggest
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={this.updateSuggestions}
+                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                onSuggestionSelected={this.onSuggestionSelected}
+                getSuggestionValue={typeface => typeface.family}
+                shouldRenderSuggestions={() => true}
+                highlightFirstSuggestion
+                renderSuggestion={typeface => (
+                  <div>
+                    <div>{typeface.family}</div>
+                  </div>
+                )}
+                inputProps={{
+                  placeholder: 'Search Google fonts',
+                  value,
+                  onChange: this.handleChange,
+                }}
+              />
+            </div>
           }
         </div>
          }
