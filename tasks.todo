@@ -9,7 +9,8 @@
 ✔ Handle slow or no connection and it SHOULD NOT FAIL / it should say no connection or sth @done(2017-06-24 19:26)
 ✔ Make look decent on mobile @done(2017-06-30 22:25)
 ☐ Add Google Analytics
-☐ Meta tags
+☐ Test on mobile and Launch!!
+✔ Meta tags @done(2017-06-30 23:40)
 ✔ Create little animations for PH @done(2017-06-30 23:02)
 ✔ create favicon @done(2017-06-30 23:02)
 ✔ Add more colors to github-picker from coolors @done(2017-06-24 23:45)
