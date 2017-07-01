@@ -5,9 +5,10 @@ import TextStyler from './TextStyler';
 
 const SideBar = (props) => {
   const handlers = props.handlers;
+  const openClass = props.isOpen ? 'sidebar--open' : '';
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${openClass}`}>
       <Header />
       <div className="tools">
         <TextStyler handlers={handlers} />
@@ -23,6 +24,7 @@ SideBar.propTypes = {
     updateFontSize: PropTypes.func,
     updateTextColor: PropTypes.func,
     updateBackgroundColor: PropTypes.func,
+    isOpen: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
