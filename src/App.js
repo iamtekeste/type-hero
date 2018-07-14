@@ -3,6 +3,7 @@ import Canvas from './components/Canvas';
 import SideBar from './components/SideBar';
 import './App.css';
 import Hamburger from './components/Hamburger';
+import ProductHuntBanner from './components/ProductHuntBanner';
 
 class App extends Component {
   constructor(props) {
@@ -67,10 +68,13 @@ class App extends Component {
     };
     const sideBarIsOpen = this.state.sideBarIsOpen;
     return (
-      <div className="App">
-        <SideBar handlers={handlers} isOpen={sideBarIsOpen} />
-        <Hamburger openSidebar={this.openSidebar} isOpen={sideBarIsOpen} />
-        <Canvas {...this.state} />
+      <div>
+        <ProductHuntBanner />
+        <div className="App">
+          <SideBar handlers={handlers} isOpen={sideBarIsOpen} />
+          <Hamburger openSidebar={this.openSidebar} isOpen={sideBarIsOpen} />
+          <Canvas {...this.state} />
+        </div>
       </div>
     );
   }

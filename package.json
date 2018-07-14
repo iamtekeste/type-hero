@@ -18,8 +18,8 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
-    "react-scripts": "1.0.7",
-    "why-did-you-update": "0.0.8"
+    "react-scripts": "^1.1.4",
+    "why-did-you-update": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

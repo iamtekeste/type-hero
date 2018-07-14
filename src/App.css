@@ -2,16 +2,20 @@ input {
   border: none;
   padding-left: 10px;
 }
+
 input:focus,
 select:focus {
   outline: none;
 }
+
 select#fontsizes:focus {
   outline: none;
 }
+
 input::-webkit-calendar-picker-indicator {
-    opacity: 1;
+  opacity: 1;
 }
+
 .App {
   display: flex;
 }
@@ -19,38 +23,45 @@ input::-webkit-calendar-picker-indicator {
 .open-menu-icon {
   display: none;
 }
+
 .hint {
   display: none;
 }
+
 .canvas {
   display: flex;
   flex: 1;
   width: 75%;
   align-items: center;
   justify-content: center;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
+
 .text-editor {
   border: none;
   padding: 20px 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   width: 90%;
 }
+
 .text-editor:focus,
 .text-editor:hover {
-    border: 1px dashed;
+  border: 1px dashed;
 }
+
 .sidebar {
   background: #333333;
   width: 230px;
 }
+
 .header {
-  color: #FFF;
+  color: #fff;
   font-family: Montserrat;
   margin-bottom: 50px;
   text-align: center;
 }
+
 .header h1 {
   font-size: 24px;
   font-weight: bold;
@@ -58,24 +69,29 @@ input::-webkit-calendar-picker-indicator {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+
 .header span {
   font-size: 14px;
   display: block;
   margin-bottom: 10px;
 }
+
 .header hr {
   border-color: #777272;
   border-width: 1px;
   width: 40%;
   margin: 0 auto;
 }
+
 .text-styler {
-    max-width: 200px;
+  max-width: 200px;
 }
+
 .tools {
-  color: #FFF;
+  color: #fff;
   padding-left: 15px;
 }
+
 .section-title {
   font-size: 18px;
   font-family: Roboto;
@@ -87,7 +103,9 @@ input::-webkit-calendar-picker-indicator {
 .text-typeface {
   margin-bottom: 15px;
 }
+
 /* Font selector */
+
 .react-autosuggest__input {
   background: #000;
   border: none;
@@ -97,6 +115,7 @@ input::-webkit-calendar-picker-indicator {
   margin-bottom: 15px;
   min-width: 191px;
 }
+
 .react-autosuggest__suggestions-list {
   margin: 0;
   list-style: none;
@@ -110,44 +129,53 @@ input::-webkit-calendar-picker-indicator {
   overflow-y: scroll;
   z-index: 2;
 }
+
 .react-autosuggest__suggestion {
-    padding: 8px 0px;
-    padding-left: 8px;
-}
-.react-autosuggest__suggestion--highlighted {
-    background: #fff;
-    color: #000;
-    cursor: pointer;
+  padding: 8px 0px;
+  padding-left: 8px;
 }
 
-.variants, .font-size {
-    display: inline-block;
+.react-autosuggest__suggestion--highlighted {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
 }
+
+.variants,
+.font-size {
+  display: inline-block;
+}
+
 /* Font variant selector */
+
 .variants {
   margin-right: 35px;
 }
+
 .variants select {
   background: #000;
   color: #fff;
   height: 30px;
-  border:  0px;
+  border: 0px;
 }
 
 /* Font size selector */
-.font-size input, select {
+
+.font-size input,
+select {
   background: #000;
   border: none;
-  color: #FFF;
+  color: #fff;
   height: 30px;
   padding-left: 10px;
 }
 
 .text-color {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* Color picker */
+
 .color--preview {
   cursor: pointer;
   width: 34px;
@@ -155,17 +183,20 @@ input::-webkit-calendar-picker-indicator {
   display: inline-block;
   vertical-align: middle;
 }
+
 .color--input {
   background: #000;
   color: #fff;
   height: 30px;
   width: 68px;
 }
+
 .chrome-picker,
 .github-picker {
   position: absolute;
   z-index: 2;
 }
+
 .chrome-picker--cover,
 .github-picker--cover {
   position: fixed;
@@ -176,41 +207,51 @@ input::-webkit-calendar-picker-indicator {
 }
 
 /* Ediable select input */
+
 .font-size {
-    position: relative;
-    width: 60px;
-    float: right;
+  position: relative;
+  width: 60px;
+  float: right;
 }
+
 .font-size select {
-    width: 100%;
+  width: 100%;
 }
+
 .font-size > * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 .font-size input {
-    position: absolute;
-    width: calc(100% - 20px);
+  position: absolute;
+  width: calc(100% - 20px);
 }
 
 /* Footer */
+
 .credits {
-    color: #fff;
-    padding-left: 10px;
-    position: absolute;
-    bottom: 0px;
+  color: #fff;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0px;
 }
+
 .me p {
   font-family: Roboto;
   margin-bottom: 5px;
 }
+
 a {
-    color: #FFF;
-    font-weight: bold;
+  color: #fff;
+  font-weight: bold;
 }
+
 .twitter-share-button {
   margin-right: 5px;
 }
+
 /* Mobile Styles */
+
 @media all and (max-width: 768px) {
   .header {
     margin-bottom: 25px;
@@ -225,17 +266,17 @@ a {
     text-align: center;
     display: block;
     padding: 10px;
-}
+  }
   .open-menu-icon {
-      display: block;
-      position: fixed;
-      right: 10px;
-      top: 10px;
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      border: none;
-      padding: 5px 5px;
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    padding: 5px 5px;
   }
   .open-menu-icon img {
     width: 100%;
@@ -248,7 +289,7 @@ a {
     right: 0;
     left: 0;
     transform: translate3d(-100%, 0, 0);
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
   }
   .sidebar.sidebar--open {
     transform: translate3d(0, 0, 0);
@@ -257,4 +298,17 @@ a {
     padding: 5px;
     text-align: left;
   }
+}
+
+.product-hunt {
+  background: #da552e;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-hunt a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Montserrat;
 }
